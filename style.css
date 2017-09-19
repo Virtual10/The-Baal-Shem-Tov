@@ -218,7 +218,36 @@ ul {
 
 /* slider_area start */
 #slider_area {}
-
+.slider_img {
+	position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: -10px;	
+}
+.slider_img li{}
+.slider_img li img{
+	max-height: 450px;
+}
+.slider_img .owl-nav i{
+    color: #fff;
+    background: #00796b;
+    padding: 16px;
+    border-radius: 50%;
+    font-size: 25px;
+    width: 58px;
+    text-align: center;
+    margin: 0px 10px;
+}
+.slider_img .owl-nav .owl-prev {
+	position: absolute;
+    top: 48%;
+    left: 0;	
+}
+.slider_img .owl-nav .owl-next {
+	position: absolute;
+    top: 48%;
+    right: 0;	
+}
 
 
 

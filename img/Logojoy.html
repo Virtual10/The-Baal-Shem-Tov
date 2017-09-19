@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logojoy</title>
+        <script>
+            window.APIURL  = "https://api.logojoy.com";
+            window.BASEURL = "https://logojoy.com";
+            window.LOGOSURL  = "https://s3.ca-central-1.amazonaws.com/logojoy/logos";
+            window.env = "prod";
+            window.logoid = "14965806";
+            window.state = {};
+            if(localStorage.state){window.state = JSON.parse(localStorage.state);}
+            window.imgsrc = 'https://s3.ca-central-1.amazonaws.com/logojoy/images';
+                    </script>
+        <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ddd2yebd';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script type="text/javascript">
+        var _qevents = _qevents || [];
+        (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+        })();
+        _qevents.push({qacct: "p-DB-KB-3QQCf-5"});
+        </script>
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '454668818203402'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=454668818203402&ev=PageView&noscript=1"
+        /></noscript>
+        <script type="text/javascript">
+        !function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0,t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+        pintrk('load','2617070743828');
+        pintrk('page');
+        </script>
+        <script type="text/javascript">
+            var boot = {app_id:"ddd2yebd"}
+            if(window.state.user){
+                boot.name=window.state.user.display_name,
+                boot.email=window.state.user.email,
+                boot.user_id=window.state.user.id
+            }
+            window.env = 'prod';
+
+            window.Intercom = window.env == 'prod' ? window.Intercom:function(){};
+            window.ga = window.env == 'prod' ? ga:function(){};
+            window.fbq = window.env == 'prod' ? fbq:function(){};
+            window.pintrk = window.env == 'prod' ? pintrk:function(){};
+
+            window._qevents = window.env == 'prod' ? _qevents.push:[]
+            window.ga('create', 'UA-37702167-17', 'auto');
+            window.ga('send', 'pageview');
+            window.ga('require', 'ecommerce');
+
+            window.Intercom("boot", boot);
+        </script>
+        <script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = '6AY1K';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+                d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+                ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+            })(window,document,window['_fs_namespace'],'script','user');
+            if(window.state.user) {
+                var identity = '';
+                if(window.state.admin) {
+                    identity = 'support@logojoy.com::';
+                }
+                FS.identify(window.state.user.id, {
+                    displayName: identity+''+window.state.user.display_name,
+                    email: identity+''+window.state.user.email,
+                    // TODO: Add your own custom user variables here, details at
+                    // http://help.fullstory.com/develop-js/setuservars.
+                    //reviewsWritten_int: 14,
+                });
+            }
+        </script>
+
+
+        <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/logojoy/dist/550cb25/legacy.css">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="content-type" content="text/html" charset="ISO-8859-1" />
+
+         <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+         <script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js" data-apikey="fc7964912dee5bca50d7349a8e4d092a"></script>
+    </head>
+    <body class="app">
+        <!-- trigger button for registration -->
+<a id="onpage-registration" data-toggle="modal" data-target="#signupModal" data-backdrop="static" data-keyboard="false"  class="active" style="height:0;opacity:0;" data-callback="onpage"></a>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+  <div class="modal-dialog modal__login" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Log In</h3>
+        <form id="login-form" name="login">
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <p class="alert alert-danger hidden"></p>
+                <button class="btn btn-primary btn-full">Log In</button>
+            </div>
+        </form>
+        <div class="modal-change">
+            <a data-toggle="modal" data-target="#passwordresetModal" data-dismiss="modal" data-keyboard="false">Forgot Password?</a>  <a data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Create an account</a>
+        </div>
+        <div class="modal-social-sign-on">
+            <div class="modal-connect-group">
+                <div class="modal-line"></div>
+                <span class="modal-connect">Or connect using</span>
+                <div class="modal-line"></div>
+            </div>
+            <div class="modal-sign-on-group">
+                <div data-provider="facebook" class="modal-sign-on-button facebook js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/facebook@2x.png"/>
+                </div>
+                <div data-provider="twitter" class="modal-sign-on-button twitter js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/twitter@2x.png"/>
+                </div>
+                <div data-provider="google" class="modal-sign-on-button google js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/google-plus.png"/>
+                </div>                
+            </div>
+        </div>
+      </div>
+    <div class="modal-footer">By signing up, you agree to our <a>terms of service</a></div>      
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal">
+  <div class="modal-dialog modal__login" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Create an Account</h3>
+        <form id="signup-form" name="signup">
+            <div class="form-group">
+                <input class="form-control" type="text" name="fname" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="lname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <p class="alert alert-danger hidden"></p>
+                <button class="btn btn-primary btn-full">Sign Up</button>
+            </div>
+        </form>
+        <div class="modal-change">
+            <a data-toggle="modal" id="loginModalLink" data-target="#loginModal" data-dismiss="modal" data-keyboard="false">Already have an account?</a>
+        </div>
+        <div class="modal-social-sign-on">
+            <div class="modal-connect-group">
+                <div class="modal-line"></div>
+                <span class="modal-connect">Or connect using</span>
+                <div class="modal-line"></div>
+            </div>
+            <div class="modal-sign-on-group">
+                <div data-provider="facebook" class="modal-sign-on-button facebook js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/facebook@2x.png"/>
+                </div>
+                <div data-provider="twitter" class="modal-sign-on-button twitter js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/twitter@2x.png"/>
+                </div>
+                <div data-provider="google" class="modal-sign-on-button google js-sso-button">
+                    <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/google-plus.png"/>
+                </div>                
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">By signing up, you agree to our <a>terms of service</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="passwordresetModal" tabindex="-1" role="dialog" aria-labelledby="passwordresetModal">
+  <div class="modal-dialog modal__login" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Send Reset Email</h3>
+        <p class="p1 center">
+            Enter your account email below to recieve reset instructions
+        </p>
+        <form id="passwordreset-form" name="passwordreset">
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <p class="alert alert-danger hidden"></p>
+                <button class="btn btn-primary btn-full">Send</button>
+            </div>
+        </form>
+        <div class="modal-change">
+            <a data-toggle="modal" data-target="#loginModal" data-dismiss="modal" data-keyboard="false">Back to login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="passwordretypeModal" tabindex="-1" role="dialog" aria-labelledby="passwordresetModal">
+  <div class="modal-dialog modal__login" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Reset Password</h3>
+        <p class="p1 center">
+            Enter a new password for your account.
+        </p>
+        <form id="passwordretype-form" name="passwordretype">
+            <div class="form-group">
+                <input type="hidden" name="activation_token">
+                <input class="form-control" type="password" name="password" placeholder="New Password">
+            </div>
+            <div class="form-group">
+                <p class="alert alert-danger hidden"></p>
+                <button class="btn btn-primary btn-full">Reset Password</button>
+            </div>
+        </form>
+        <div class="modal-change">
+            <a data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Back to login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <!--<div class="tooltip" id="tooltip"></div>
+<div class="tooltip hold-below" id="tooltip"></div>-->
+<div id="alert-modal">
+    <div class="alert-outer">
+        <div class="alert-middle">
+            <div class="alert" id="close-modal">
+                <p>Are you sure you want to close this modal?</p>
+                <ul>
+                    <li><a href="#" rel="close-alert" data-option="cancel">Cancel</a></li>
+                    <li><a href="#" class="highlighted">Close</a></li>
+                </ul>
+            </div><!-- end alert -->
+        </div><!-- end alert middle -->
+    </div>
+</div>
+
+
+<div id="overlay" class="overlay hidden">
+    <div class="vheight">
+        <div class="vcell">
+            <div class="loader hidden"></div>
+            <h5 class="hidden"></h5>
+        </div>
+    </div>
+</div>
+        <header>
+    <nav class="main-navbar__app">
+        <a id="toggle-side-nav" class="btn-hamburger">&nbsp;</a>
+		<a class="btn-previous" onclick="history.back();return false;"><img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/back-arrow-white@2x.png"></a>
+        <img class="top-bar-logo" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/logojoy-logo-white.png">
+
+		<ul class="menu-right hidden">
+			<li class="action" data-tooltip="Share" data-tooltip-class="below" data-toggle="modal" data-target="#shareDialog"><img class="icon" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/share@2x.png"></li>
+			<li class="action" onclick="window.duplicateLogo()" data-tooltip="Duplicate" data-tooltip-class="below"><img class="icon" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/duplicate@2x.png"></li>
+			<li class="action" onclick="window.favoriteLogo(false)" data-tooltip="Unfavorite" data-tooltip-class="below">
+				<img style="width: 15px; height: 15px" class="icon" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/icons/trash-icon%402x.png">
+				<div id="unfavorite" class="mini-menu">
+					<span>Unfavoriting your logo will remove it from your account</span>
+					<button onclick="window.confirmUnfavorite()">Confirm</button>
+				</div>
+			</li>
+			<li class="action hidden js-download-button" onclick="window.DownloadLogo()" data-tooltip="Download" data-tooltip-class="below">
+				<img class="icon download-icon-editor" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/icons/download-icon%402x.png">
+			</li>
+			<li>
+				<button id="buy-button" class="buy-button">Buy</button>
+			</li>
+		</ul>
+    </nav>
+
+    <aside id="side-nav" class="side-nav">
+		<div class="side-nav__header">
+			<span id="username"></span>
+		</div>
+		<ul class="side-nav__body">
+			<div class="notLoggedIn">
+				<li><a data-toggle="modal" data-target="#loginModal"  rel="modal">Login</a></li>
+      			<li><a data-toggle="modal" data-target="#signupModal"  class="signup" rel="modal">Register</a></li>
+			</div>
+			<div class="isLoggedIn">
+				<li><a id="show-dashboard" href="/dashboard">My favorites <span id="favorited_logos" class="count"></span></a></li>
+				<li><a id="show-generator" href="/generate">Logo Generator</a></li>
+				<li><a id="show-referral" href="/referral">Give $20, Get $20</a></li>
+				<li><a id="show-admin" onclick="window.LoadView('admin_view')" style="display:none">Admin</a></li>
+			</div>
+		</ul>
+
+		<ul class="side-nav__footer">
+			<li><a href="/account-settings">Account</a></li>
+			<li><a href="/terms" target="_blank">Terms of Service</a></li>
+			<li><a href="/privacy" target="_blank">Privacy</a></li>
+		    <li><a onclick="window.logout();" >Log Out</a></li>
+		</ul>
+	</aside>
+</header>
+        <!-- Load  App -->
+        <div id="browser-alert" class="alert alert-danger browser-alert">
+            You are currently using an older version of <span name="browser">Safari</span>. Some features on this site may not work as a result, please upgrade or switch to <a href="https://www.google.ca/chrome/browser/desktop/index.html" target="_blank">Google Chrome</a>
+        </div>
+        <section class="main-content">
+            <section id="app-packages" class="app-view app-packages hidden">
+    <div class="container checkout package-options">
+        <div class="row copy-header">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+              <h1>Checkout</h1>
+            </div>
+        </div>
+
+        <div class="design-callout"><img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/designer-callout@2x.png"/></div>
+        <div class="package-option">
+            <h5>Basic</h5>
+            <h1>$20</h1>
+
+            <ul>
+                <li>Low resolution logo</li>
+                <li>Colored background</li>
+            </ul>
+            <button type="submit" class="btn btn-hollow" onclick="window.initCheckout('basic');">Buy Basic</button>
+            <h6>USD</h6>
+        </div>
+
+         <div class="package-option premium">
+            <h5>Premium</h5>
+            <h1>$65</h1>
+            <h6 class="save"><strike>was $130</strike> save 50%</h6>
+            <ul>
+                <li>High resolution PNG</li>
+                <li>Vector EPS and SVG files</li>
+                <li>Transparent PNG</li>
+                <li>Lifetime phone support</li>
+                <li>Font names & color palette</li>
+                <li>Brand guidelines</li>
+                <li>Social media assets</li>
+                <li>Professional watermark</li>
+                <li>Full copyright ownership</li>
+                <li>Make changes and re-download</li>
+                <li>Print-ready</li>
+                <li><a href="https://s3.ca-central-1.amazonaws.com/logojoy/logos/moovaudio.zip" target="_target">View Sample Deliverable</a></li>
+            </ul>
+            <button type="submit" class="btn" onclick="window.initCheckout('premium');">Buy Premium</button>
+            <h6>USD</h6>
+        </div>
+
+        <div class="package-option">
+            <h5>Enterprise</h5>
+            <h1>$165</h1>
+
+            <ul>
+                <li>Everything in Premium</li>
+                <li>One hour design session with one of our designers</li>
+            </ul>
+
+            <button type="submit" class="btn btn-hollow" onclick="window.initCheckout('enterprise');">Buy Enterprise</button>
+            <h6>USD</h6>
+        </div>
+    </div>
+</section>
+            <div id="app-referral" class="app-view app-referral hidden">
+	<div class="referral-header">
+		<h1>Give $20, Get $20</h1>
+	</div>
+	<div class="container">
+		<h2>Know any other entrepreneurs? Share your promo code with them and give them $20 off their purchase of a premium logo. Once they purchase, you’ll get $20 off a premium logo.</h2>
+		<div class="invite-options">
+			<form>
+				<label>
+					<span class="label">Your promo code:</span>
+					<input type="text" class="form-control referralCode" name="promo-code" value="">
+				</label>
+			</form>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.logojoy.com/" target="_blank" class="option fb referralCode">Facebook</a>
+			<a href="https://twitter.com/home?status=Entrepreneurs,%20now%20you%20can%20make%20your%20own%20logo.%20Use%20my%20code%20'x3waxn'%20for%20$20%20off.%20https%3A//www.logojoy.com/" target="_blank" class="option twitter referralCode">Tweet</a>
+			<a href="mailto:?&subject=Cool new tool to make your own logo&body=Hey!%20Thought%20this%20might%20interest%20you,%20it's%20a%20site%20that%20allows%20you%20to%20make%20a%20logo.%20Use%20my%20code%20'x3waxn'%20for%20$20%20off.%0A%0ACheck%20it%20out%3A%20https%3A//www.logojoy.com/" target="_blank" class="option email referralCode">Email</a>
+		</div>
+	</div>
+</div>
+            <div class="hidden" id="brand_guidelines_modal">
+  <div class="modal2__backdrop"></div>
+  <div class="modal2 modal2--share">
+    <div class="modal2__header">
+      <h2 class="modal2__title">
+        Your Brand Guidelines
+      </h2>
+      <button class="modal2__close" target="#brand_guidelines_modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal2__body hidden" id="onboardBgl">
+      <div>
+        <h2 class="alt">Choose your unique URL</h2>
+      </div>
+      <div>
+        <p class="lead">This is the URL that people will go to view your brand guidelines. You can always change this later.</p>
+      </div>
+      <div>
+        <div class="bgl-slug">
+          <div class="bgl-slug__prefix">
+            logojoy.com/b/
+          </div>
+          <input class="bgl-slug__input" placeholder="your_url">
+        </div>
+        <div>
+          <p class="bgl-alert hidden">
+            Looks like someone beat you to that URL, you should try another.
+          </p>
+          <button type="button" class="button bgl-slug__button" id="checkSlug">
+          Check availability</i>
+        </button>
+          <button type="button" class="button bgl-slug__button hidden" id="submitSlug">
+          Continue <i class="icon icon--arrow"></i>
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal2__body" id="bglDash">
+      <div>
+        <a id="bglUrlLink" class="modal2--share__button" href="" target="_blank">
+        Go to your brand guidelines<i class="icon icon--arrow"></i>
+      </a>
+      </div>
+      <div>
+        <div class="bgl-badge">
+          <h3>
+          Get your badge
+        </h3>
+          <div class="bgl-badge__input-group bgl-badge__input-group--multiline">
+            <textarea class="bgl-badge__input" id="copyBadge">http://logojoy.com/b/your_slug</textarea>
+            <button class="bgl-badge__copy" id="copyButton" target="#copyBadge">
+              Copy
+            </button>
+            <small>
+              Copy and paste this code anywhere in your website to easily make your brand guidelines available to customers, partners, friends and anyone else.
+              <!--<a href="http">Learn more</a>-->
+            </small>
+          </div>
+          <div class="bgl-badge__container">
+            <div class="bgl-badge__example" id="bglBadge-example">
+              <img src="https://s3.ca-central-1.amazonaws.com/logojoy/public/brand-guidelines-badge.png" style="width: 217px; height: 61px" alt="View our Brand guidelines">
+            </div>
+            <small>A preview of your badge</small>
+          </div>
+        </div>
+        <!-- cols -->
+      </div>
+      <div>
+        <h3> Share your Guidelines</h3>
+        <div class="bgl-badge__input-group bgl-badge__input-group--oneLine">
+          <input type="text" class="bgl-badge__input" id="bglUrl" value="http://logojoy.com/b/your_slug">
+          <button class="bgl-badge__copy" id="copyButton" target="#bglUrl">
+                Copy
+              </button>
+        </div>
+      </div>
+
+      <div class="social-buttons">
+        <div class="social-buttons__container">
+          <button class="social-buttons__single social-buttons__single--facebook">
+
+              </button>
+          <button class="social-buttons__single social-buttons__single--twitter">
+
+              </button>
+          <a class="social-buttons__single social-buttons__single--email">
+
+          </a>
+        </div>
+      </div>
+
+      <div class="modal2__footer">
+        <small><a href="" id="changeUrl">Change URL</a></small>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+            <div id="app-admin" class="app-view hidden" style="padding:100px">
+  <div class="container">
+    <div class="cols">
+        <div class="col">
+          <h3>Resend emails</h3>
+            <div class="form-group">
+              <button id="sendLogoEmail" class="btn btn-default btn-block">Send Logo Email</button>
+            </div>
+            <div class="form-group">
+              <button id="sendNominationEmail" class="btn btn-default btn-block">Send Nomination Email</button>
+            </div>
+        </div>
+        <div class="col">
+          <h3>Change account credit</h3>
+          <form id="addCredit" class="form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="number" class="form-control" id="credit" name="credit" placeholder="Amount">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Change credit</button>
+          </form>
+        </div>
+        <div class="col">
+            <h3>Add New Coupon</h3>
+            <form id="addCoupon" class="form">
+                <div class="form-group">
+                  <input type="text" pattern="^\S{5,30}$" class="form-control" placeholder="Coupon code" name="couponName" id="couponName">
+                </div>
+                <div class="form-group">
+                  <input type="text"  class="form-control" placeholder="Description" name="description">
+                </div>
+                <div class="form-inline form-group">
+                  <select class="form-control" name="type">
+                    <option value="percent">%</option>
+                    <option value="amount">$</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="number" name="discountAmount" id="discountAmount" placeholder="Amount">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="number" name="remaining_uses" placeholder="Remaining Uses">
+                </div>
+                <button class="btn btn-default" type="submit">Add Coupon</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+            <div id="app-dashboard" class="app-view hidden app-dashboard">
+<div id="svg-placeholder"></div>
+    <div id="logo-favorites">
+        <section class="copy-header">
+            <div class="vheight">
+                <div class="vcell">
+                    <h1>Your Favorites</h1>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="favorite-logos" class="favorite-logos"></section>
+            <button class="btn btn-primary loadmorelogos hidden">Load More Logos</button>
+        </div>
+
+        <div class="snackbar">
+            <span class="message"></span>
+        </div>
+    </div>
+
+    <div id="logo-editor" class="hidden">
+    <div class="snackbar">
+        <span class="message"></span>
+    </div>
+    <section class="edit-header hidden">
+        <div class="edit-nav">
+            <div class="vheight"><div class="vcell">
+                <ul id="edit-logo-nav" class="sub-nav">
+                    <li data-option="preview-logo" class="active">Preview</li>
+                    <li data-option="edit-font">Fonts</li>
+                    <li data-option="edit-color">Colors</li>
+                    <li data-option="edit-layout">Layout</li>
+                    <li data-option="edit-symbol" class="hidden">Symbol</li>
+                    <li data-option="edit-container" class="hidden">Container</li>
+                </ul>
+            </div></div>
+        </div>
+
+        <form name="edit-logo" class="edit-logo" >
+        <section class="edit-options edit-font hidden">
+            <div class="edit-sub-nav menu edit-nav-font">
+                <div class="vheight"><div class="vcell">
+                    <ul id="edit-logo-font-nav" class="sub-nav">
+                        <li class="active" data-options="company-name-options">Company Name Options</li>
+                        <li data-options="company-name-font">Company Name Font</li>
+                        <li data-options="company-slogan-options">Slogan Options</li>
+                        <li data-options="company-slogan-font">Slogan Fonts</li>
+                    </ul>
+                </div></div>
+            </div>
+            <div class="edit-sub-nav edit-nav-font option-menu company-name-font hidden">
+                <ul id="company-font-options" class="font-options">
+                    <li data-font="sans_serif" data-tooltip="Clean logotypes that convey simplicity, power, and confidence." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/sans-serif@2x.png">
+                    </li>
+                    <li data-font="serif" data-tooltip="Serif logotypes convey authenticity, grace, and elegance in a non-confrontational manner." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/serif@2x.png">
+                    </li>
+                    <li data-font="vintage" data-tooltip="Classical logotypes that scream authenticity and old-style ways." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/vintage@2x.png">
+                    </li>
+                    <li data-font="handwritten" data-tooltip="Handwritten logotypes that seem relatable and natural." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/handwritten@2x.png">
+                    </li>
+                    <li data-font="modern" data-tooltip="Give a sense of innovation and forward-looking goals." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/modern@2x.png">
+                    </li>
+                    <li data-font="slab" data-tooltip="Timeless, powerful logotypes that have hints of vintage and hints of modern." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/slab@2x.png">
+                    </li>
+                    <li data-font="funky" data-tooltip="Funky logotypes for alternative companies." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/funky@2x.png">
+                    </li>
+                    <li data-font="calligraphic" data-tooltip="Fancy calligraphic logotypes that give a sense of elegance." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/calligraphic@2x.png">
+                    </li>
+                    <li data-font="bubbly" data-tooltip="Fun, bubbly logotypes for the playful offering." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/bubbly@2x.png">
+                    </li>
+                    <li data-font="futuristic" data-tooltip="Let your customers know you're innovative." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/futuristic@2x.png" style="height:13px">
+                    </li>
+                    <li data-font="elegant" data-tooltip="Impressively elegant logotypes for the classiest of offerings." data-tooltip-class="hold-below big tooltip--fontoption">
+                      <img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/font-types/elegant@2x.png" style="height:13px">
+                    </li>
+                </ul>
+            </div>
+            <div class="edit-sub-nav edit-nav-font option-menu company-name-options">
+                <div class="input-size-picker font-size-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="font_size" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Font-size</p>
+                </div>
+                <div class="input-size-picker letter-spacing-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="font_letter_spacing" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Letter Spacing</p>
+                </div>
+                <div class="input-text company-name">
+                  <input type="text" id="company_name" name="company_name">
+                  <a class="upp">UPP</a>
+                  <a class="low">low</a>
+                  <p>Company Name</p>
+                </div>
+                <div class="input-size-picker y-offset-picker hidden">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="y_offset_pos" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Y-offset</p>
+                </div>
+            </div>
+            <div class="edit-sub-nav edit-nav-font option-menu company-slogan-options hidden">
+                <div class="input-size-picker font-size-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="font_size" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Font-size</p>
+                </div>
+                <div class="input-size-picker letter-spacing-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="font_letter_spacing" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Letter Spacing</p>
+                </div>
+                <div class="input-text company-name">
+                    <input type="text" class="" id="company_slogan" name="company_slogan">
+                    <a class="upp">UPP</a>
+                    <a class="low">low</a>
+                    <p>Slogan</p>
+                </div>
+                <div class="input-size-picker y-offset-picker hidden">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="y_offset_pos" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Y-offset</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="edit-options edit-color hidden">
+            <div class="edit-sub-nav menu" style="min-height:85px;padding:0px 0px 12px 0px">
+                <div class="vheight"><div class="vcell">
+                    <p style="position:relative">
+                        Tag the elements you wish to color
+                        <span class="question-mark"  data-tooltip="Color selection uses intelligent color matching and feature selection to help you find your perfect logo colors. Learn more at https://help.logojoy.com/customization/multicolor" data-tooltip-class="below">
+                            <a target="_blank" href="http://help.logojoy.com/customization/multicolor"><img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/icons/question-mark.svg"></a>
+                        </span>
+                    </p>
+                    <div id="colorBtns"  class="color-btns input-wrapper"></div>
+                </div></div>
+            </div>
+
+            <div class="color-variants">
+                <div class="input-wrapper">
+                    <button type="button" id="reverse-colors" class="btn btn-light"><img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/switch-dark-bg@2x.png"/></button>
+                    <p style="margin-top: 3px;">White</p>
+                </div> 
+                <div class="input-wrapper">
+                    <input id="color-picker" class="hidden" type="text"/>
+                    <p style="margin-top: 3px;">Custom color</p>
+                </div>
+                <div id="goldfoil-wrapper" class="input-wrapper">
+                    <button type="button" id="goldfoil-gradient" data-gradient="goldfoil" class="btn btn-light gradient-options"><img src="https://s3.ca-central-1.amazonaws.com/logojoy/images/icons/goldfoil.png"/></button>
+                    <p style="margin-top: 7px;">Gold Foil</p>
+                </div>
+                <div class="color-options">
+                    <ul id="color-options">
+                        <li style="background-color:#111111" class="black" data-color="#111111" data-color-class="greyscale" data-tooltip="Power, elegance, reliability, intelligence, modesty, maturity, functionality, and formality" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#0066D0" class="blue" data-color="#0066D0" data-color-class="blue" data-tooltip="Depth and stability, trust, loyalty, wisdom, confidence, intelligence, faith, truth, heaven, tranquility and calmness" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#04ADAD" class="teal" data-color="#04ADAD" data-color-class="teal" data-tooltip="Creativity, inspiration, credibility, reliability, spiritual development" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#12AB0F" class="green" data-color="#12AB0F" data-color-class="green" data-tooltip="Nature, growth, harmony, freshness, fertility, safety, healing, money" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#6E40C0" class="purple" data-color="#6E40C0" data-color-class="purple" data-tooltip="Royalty, power, nobility, luxury, ambition, wealth, extravagance, wisdom, dignity, independence, creativity, mystery, and magic" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#C23BAB" class="pink" data-color="#C23BAB" data-color-class="pink" data-tooltip="Girly, sweet, innocent, sensitive, passionate, playful, sensual and loving" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#EA1B1B" class="red" data-color="#EA1B1B" data-color-class="red" data-tooltip="Power, energy, passion, desire, speed, strength, love, fire, intensity, and celebration" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#ED7928" class="orange" data-color="#ED7928" data-color-class="orange" data-tooltip="Joy, enthusiasm, fascination, happiness, creativity, determination, attraction, success, encouragement, and stimulation" data-tooltip-class="hold-below big"></li>
+                        <li style="background-color:#EEC821" class="yellow" data-color="#EEC821" data-color-class="yellow" data-tooltip="Sunshine, joy, happiness, intellect, cheerfulness, and energy" data-tooltip-class="hold-below big"></li>
+                    </ul>
+                    <p>Browse color variations</p>
+                </div>
+              
+                <div>
+                </div>
+            </div>
+        </section>
+
+        <section class="edit-options edit-symbol hidden">
+            <div class="edit-sub-nav menu symbol-menu">
+                <div class="vheight"><div class="vcell">
+                    <ul id="edit-logo-symbol-nav" class="sub-nav">
+                        <li class="active" data-options="symbol-edit">Edit symbol</li>
+                        <li data-options="symbol-browser">Browse Icons</li>
+                        <li data-options="monograms-browser">Browse Monograms</li>
+                        <li data-options="symbol-container-browser">Browse Monogram Containers</li>
+                    </ul>
+                </div></div>
+            </div>
+            <div class="edit-sub-nav option-menu symbol-edit">
+                <div class="input-size-picker symbol-size-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="symbol_size" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Symbol size</p>
+                </div>
+
+                <div class="input-size-picker monogram-size-picker hidden">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="monogram_size" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Monogram size</p>
+                </div>
+                <div class="input-text monogram-text">
+                    <input type="text" name="monogram_text">
+                    <p>Monogram Text</p>
+                </div>
+                <div class="input-wrapper">
+                    <button type="button" class="btn btn-light symbol-alignment" data-alignment="top">Top</button>
+                    <button type="button" class="btn btn-light symbol-alignment" data-alignment="bottom">Bottom</button>
+                    <button type="button" class="btn btn-light symbol-alignment" data-alignment="left">left</button>
+                    <button type="button" class="btn btn-light symbol-alignment" data-alignment="right">right</button>
+                </div>
+            </div>
+            <div class="edit-sub-nav option-menu symbol-browser hidden">
+                <input type="text" name="icon-search" class="search" placeholder="Search for icons" autocomplete="off">
+            </div>
+        </section>
+
+        <section class="edit-options edit-container hidden">
+            <div class="edit-sub-nav menu container-menu">
+                <div class="vheight"><div class="vcell">
+                    <ul id="edit-logo-container-nav" class="sub-nav">
+                        <li class="active" data-options="container-edit">Edit Container
+                        <li data-options="filled-container-variations">Filled container</li>
+                        <li data-options="outline-container-variations">Outline container</li>
+                    </ul>
+                </div></div>
+            </div>
+
+            <div class="edit-sub-nav option-menu container-edit">
+                <div class="input-size-picker container-size-picker">
+                    <button type="button" class="minus"></button>
+                    <input type="text" class="numerical" name="container_size" value="">
+                    <button type="button" class="plus"></button>
+                    <p>Container size</p>
+                </div>
+            </div>
+        </section>
+        </form>
+    </section>
+
+    <div class="container container--editor">
+        <div id="errors"></div>
+        <section class="edit-logos preview-logo hidden">
+            <svg class="preview-filters" height="0">
+                <defs>  
+                    <linearGradient id="logo-gradient" x1="100%" y1="50%" x2="0%" y2="0%" >
+                        <stop offset="0%" stop-color="#B88746">
+                            <animate attributeName="stop-color" values="#B88746; #FDF5A6; #B88746" dur="3.4s" repeatCount="2"></animate>
+                        </stop>
+                        <stop offset="100%" stop-color="#FDF5A6">
+                            <animate attributeName="stop-color" values="#FDF5A6; #B88746; #FDF5A6" dur="3.4s" repeatCount="2"></animate>
+                        </stop>
+                    </linearGradient> 
+                    <filter id="convolve">
+                         <feConvolveMatrix kernelMatrix="1 0 0 0 0 0 0 0 -1" />
+                        </filter>
+                    <filter id="blurMe">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+                    </filter>
+                    <filter id="blurMe2">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+                    </filter>
+                     <filter id="blurMe3">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
+                    </filter>
+                </defs>
+            </svg>    
+
+            <!-- full screen slider -->
+            <div id="toucharea" class="slider fullscreen no-editor js-fullscreen-slider">
+                <div class="arrow arrow-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.9 45.8" style="enable-background:new 0 0 24.9 45.8;" xml:space="preserve"><path class="st0" d="M0.6,45.2C1,45.6,1.5,45.8,2,45.8s1-0.2,1.4-0.6l20.9-20.9c0.8-0.8,0.8-2,0-2.8L3.4,0.6c-0.8-0.8-2-0.8-2.8,0
+                            s-0.8,2,0,2.8l19.5,19.5L0.6,42.4C-0.2,43.2-0.2,44.4,0.6,45.2z"/></svg>
+                </div>
+                <div class="arrow arrow-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24.9 45.8" style="enable-background:new 0 0 24.9 45.8;" xml:space="preserve"><path class="st0" d="M0.6,45.2C1,45.6,1.5,45.8,2,45.8s1-0.2,1.4-0.6l20.9-20.9c0.8-0.8,0.8-2,0-2.8L3.4,0.6c-0.8-0.8-2-0.8-2.8,0
+                            s-0.8,2,0,2.8l19.5,19.5L0.6,42.4C-0.2,43.2-0.2,44.4,0.6,45.2z"/></svg>
+                </div>
+                <!-- title slide -->
+                <div data-slide="1" class="slider--slide slider--slide-active slider--slide-first title">
+                    <div class="logo-wrap preview-svg preview-title"></div>
+                </div>
+                <!-- business cards -->
+                <div data-slide="2" class="slider--slide slider--slide-bcards business-cards">
+                    <div class="background-overlay"></div>
+                    <div class="card-scale">
+                        <div class="bcard c1">
+                            <div class="logo-wrap">
+                                <div class="atv-card-shine"></div>
+                                <div class="preview-bcards preview-bcard1"></div>
+                                <div class="colour-bg"></div>
+                            </div>
+                        </div>
+                        <div class="bcard c2">
+                            <div class="logo-wrap">
+                                <div class="atv-card-shine"></div>
+                                <div class="preview-bcards preview-bcard2"></div>
+                                <div class="colour-bg"></div>
+                                <div class="word-wrap">
+                                    <p class="main-title">K Consulting</p>
+                                    <p class="email">info@kconsulting.com</p>
+                                    <p class="number">(555) 555-5555</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bcard c3">
+                            <div class="logo-wrap">
+                                <div class="atv-card-shine"></div>
+                                <div class="preview-bcards preview-bcard3"></div>
+                                <div class="colour-bg"></div>
+                            </div>
+                        </div>
+                        <div class="bcard c4">
+                            <div class="logo-wrap">
+                                <div class="word-wrap">
+                                    <p class="main-title">K Consulting</p>
+                                    <p class="email">info@kconsulting.com</p>
+                                    <p class="number">(555) 555-5555</p>
+                                </div>
+                                <div class="colour-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- gold foil effect -->
+                <div data-slide="3" class="slider--slide slider--slide-gold gold-logo">
+                    <video class="background" playsinline muted preload poster="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/goldfoil-bg.png">
+                        <source type="video/mp4" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/goldfoil.mp4"/>
+                    </video>
+                    <div class="first-shadow"></div>
+                    <div class="second-shadow"></div>
+                    <div class="third-shadow"></div>
+                    <!-- gold logo -->
+                    <div class="gold-effect-wrap logo-wrap preview-goldfoil">
+                    </div>
+                    <!-- embossed logo on top -->
+                    <div class="emboss-wrap logo-wrap preview-goldfoil">
+                    </div>
+                </div>
+                <!-- apparel -->
+                <div data-slide="4" class="slider--slide slider--slide-apparel apparel">
+                    <div class="logo-wrap male">
+                        <div class="preview-apparel preview-apparel1">
+                        </div>
+                    </div>
+                    <div class="logo-wrap female">
+                        <div class="preview-apparel preview-apparel2">
+                        </div>
+                        <div class="shirt-colour">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1060" viewBox="0 0 1060 2200" preserveAspectRatio="xMinYMax meet">
+                                <path d="M852.9,140h13.6l5.2,1.1a521.1,521.1,0,0,1,96.4,21.6,19.2,19.2,0,0,1,11,8.8q6.9,11.7,14,23.1a117.8,117.8,0,0,1,15.5,35.6,252.7,252.7,0,0,0,6.9,24.8c4.7,13.8,10.1,27.6,15.5,41.4a10.4,10.4,0,0,0,3.9,3.2,20.1,20.1,0,0,1,4.1,2.8c4.1,5.2,8,10.6,12.1,16v4.7l-1.5,1.3a162.7,162.7,0,0,1-29.8,22.4,364.2,364.2,0,0,0-37.1,25.5c-10.1,8-19,17.9-28.7,26.5A176.5,176.5,0,0,1,934.6,413a23.1,23.1,0,0,1-16,3c-4.5-.6-4.4.6-4.6,5.3s-.6,8.8-.9,13.2-.4,6.7-.6,9.9.6,5.2.4,7.6c-.9,24.4-6,47.6-14.5,71.2-1.7,5.6-4.1,11.7-5,17.3-3.5,25.7-7.4,50.7-10.2,76.4-1.5,13.4-2.2,27-2.8,40.6s-.4,24.2-.9,36.2a28.7,28.7,0,0,1-5.4,17.5,11.7,11.7,0,0,0-2.2,7.1c1.1,12.5,2.4,25,3.7,37.5a55.7,55.7,0,0,0,2.8,13.4c.9,1.7,1.1,5.1.1,6.8-4.1,7.3-9.2,12.9-12,20.6-6.5,17-18.2,27.2-32.4,39.9-14.9,9.8-22.5,23.5-32.4,37.5-.6.9-3.7,8.3-4.3,9.2-4.1,6.5-7.1,9.2-11.7,15.5s-8.4,9.5-12.3,14.5-6.7,11.7-12.2,15.5-12.5,8-18.3,11.5-3.6,5-1.7,8.7c0,0-3.5,1.9-8,4.7-6.7-.5-11.7-1.2-19.7-1.7L695,950.7c-3.4-.6-19.5,10.8-22.4,12.7L640,982.5c-2.8,1.7-5.4,1.2-7.8-1.2a24.8,24.8,0,0,0-16.6-7.1l-9.3-.4a43.4,43.4,0,0,1-19.4-4.5,34.7,34.7,0,0,0-11.4-3.5c-8.8-1.1-17.9-1.5-26.8-2.6s-15.3-2.4-23.1-3.2a44.9,44.9,0,0,1-23.1-9.1c-8.6-6.5-14.9-14.9-20.9-23.7-10.6-15.3-20.9-30.9-32.4-45.5a410.4,410.4,0,0,1-32.8-49.2,6.3,6.3,0,0,1,0-7.3,61.3,61.3,0,0,0,5-9.7,37.5,37.5,0,0,0,.9-27.8,27.2,27.2,0,0,1,.4-19.6c1.3-3,2.2-6.3,3.5-9.5,4.3-10.1,8.6-20.3,13.2-30.2s7.3-13.4,10.4-20.5a39.9,39.9,0,0,0,2.8-14c.4-19.4.9-38.8.6-58.3a358.2,358.2,0,0,0-1.5-41c-3.5-29.8-7.1-59.3-4.5-89.5a9.1,9.1,0,0,0-3-6.5,35.4,35.4,0,0,1-10.4-16c-.9-3-1.5-6-2.6-8.8-2.8-7.3-4.3-14.7.4-22.4-3.9-.2-3.5-2.2-2.6-4.3s1.1-4.3,1.9-7.6c-8.2,8.4-17,6.7-25.9,4.3l-6.5-2.2a367.7,367.7,0,0,1-70.1-36.7l-47.5-32.3v-2.4l10.8-15.5c2.2-3,5-5.4,6.7-8.4,10.6-17.9,20.5-35.8,31.1-53.5s26.1-40.8,37.7-61.7a74.4,74.4,0,0,1,35.2-32.4c12.5-5.8,25.7-9.9,38.6-14.7a7.3,7.3,0,0,1,5.2,1.1c5.6,3.2,10.8,7.1,16.6,9.7a34.5,34.5,0,0,0,14.7,2.8c3.9-.2,8.3-3.4,12.4-5.1,1.9,2.4,4.8,5.9,7.1,8.5,16.6,20.1,57.5,44.8,98.3,55.3,43.1,9.7,86.9,8.9,130.6,1.8,34.6-7.5,68.3-24.2,93.9-49.8,16.4-16.4,29-38.7,39.8-59.2,4.1-7.8,2.1-6-6.3-8.8h-.4Z"/>
+                                <path d="M656.1,1128l-15.3-.9-28.3-1.5-.4-1.3a96.7,96.7,0,0,1,9.3-4.1c3-1.1,5.6-1.9,7.1-5.2a8.6,8.6,0,0,1,3.7-3l109.6-64.9a32.1,32.1,0,0,0,14.2-15.8c2.8-6.9,4.5-13.7,8-20.4a21.8,21.8,0,0,1,4.4-5.7,7.7,7.7,0,0,1,3.2-1.5c6.4,6.8,13.3-4.3,19.6-6.7l2.4-1.1c-4.1,6.7-7.6,12.7-11.4,18.6a17.2,17.2,0,0,0,.4,19.2c3,4.4,6.3,4.7,11,2.6a31.1,31.1,0,0,1,10.8-3,22,22,0,0,0,12.5-4.7l12.5-9.7c.2,10,2.6,9.4,12.5,7,16.6-3.9,30.5-14.8,41.5-26.8a101.1,101.1,0,0,0,15.2-21.2c8-15.5,14.3-31.4,21.8-47.3l.8-2.7a56.8,56.8,0,0,1,3.5,23.5,17.9,17.9,0,0,0,.6,5c1.5,7.1,4.3,10,4.8,26.8.2,7.3,3.4,13.4,4.7,20.3,2.4,12.3,3.7,23,6.3,35.3,1.5,7.3,3.5,11.5,5,18.8s.2,14.8-6.1,18.5c-17.9,12.3-38,19.4-58.9,23.7-30.4,6.3-60.6,12.9-91.3,17.5s-61.7,6-92.6,8.8c-8.6.9-17,1.1-25.7,1.7H656.1Z"/>
+                                <path d="M485.1,1113.1l-20.9-4.1a518.9,518.9,0,0,0-84.1-10.1,104.4,104.4,0,0,0-11.7.2c-3.7.2-6.2-2.7-6-6.3.4-10.8,1-20,2.3-30.6a268.4,268.4,0,0,1,6.5-33.4c4.7-18.6,6.5-37.1,7.6-56.1a199.8,199.8,0,0,1,3.2-21.1,46,46,0,0,1,1.5-5.2l2.6,1.9c11.4,12.1,23.1,24,34.3,36.2a40.1,40.1,0,0,1,6.7,10.4c12.3,26.8,31.1,48.3,52.6,68l8.2,7.8a2.8,2.8,0,0,1-.2,4.7c-8.8,6.5-9.9,14.9-6.7,24.8Z"/>
+                                <path d="M802,985.2,790.1,958c4.5-3.7,9.9-6.9,14-11.4s9.5-13.2,14.2-19.6a44.9,44.9,0,0,1,4.5-5,1.6,1.6,0,0,1,2.6,1.3,8.2,8.2,0,0,1-.6,2.8c-3.9,9.9-8,19.9-11.9,29.8s-5.6,15.3-8.4,23.1Z"/>
+                                <path d="M865.2,981.5l11.2-23.1,1.7.9C874.5,967,872.3,975.7,865.2,981.5Z"/>
+                            </svg>
+                            <!-- <img src="dist/images/previews/apparel-model-female-tshirt-texture.png" alt="T-Shirt Texture"> -->
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- iPhone -->
+                <div data-slide="5" class="slider--slide slider--slide-iphone iphone-dark">
+                    <video class="background" playsinline muted preload poster="dist/images/previews/iphone-dark-noshadow.png">
+                        <source type="video/mp4" src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/iphone-dark-hi-res-long.mp4">
+                    </video>
+                    <div class="logo-wrap preview-iphone">
+                    </div>
+                </div>
+                <!-- escalator -->
+                <div data-slide="6" class="slider--slide slider--slide-last escalator">
+                    <div class="slider--slide-escalator">
+                        <video class="background" playsinline muted loop preload poster="dist/images/previews/iphone-dark-noshadow.png">
+                            <source src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/escalator-signage.mp4">
+                        </video>
+                        <div class="logo-wrap preview-escalator">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thumbnails">
+                    <img data-thumb="1" class="thumb active-slide" data-slide='title' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-title.png">
+                    <img data-thumb="2" class="thumb" data-slide='business-cards' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-bcards.png">
+                    <img data-thumb="3" class="thumb" data-slide='gold-logo' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-gold.png">
+                    <img data-thumb="4" class="thumb" data-slide='apparel' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-apparel.png">
+                    <img data-thumb="5" class="thumb" data-slide='iphone-dark' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-iphone.png">
+                    <img data-thumb="6" class="thumb" data-slide='escalator' src="https://s3.ca-central-1.amazonaws.com/logojoy/images/previews/thumb-escalator.png">
+                </div>
+            </div> <!-- //end fs slider -->
+
+            <!-- <div class="preview-full preview-svg"></div>
+            <div class="preview-half preview-business-card"><div class="realism"></div></div>
+            <div class="preview-half preview-letterhead"><div class="realism"></div></div>
+            <div class="preview-half preview-envelope"><div class="realism"></div></div>
+            <div class="preview-half preview-iphone"><div class="realism"></div></div>
+            <div class="preview-full preview-building"><div class="realism"></div></div>
+            <div class="preview-half preview-box2"><div class="realism"></div></div>
+            <div class="preview-half preview-box"><div class="realism"></div></div> -->
+        </section>
+
+        <section class="favorite-logos edit-logos company-name-options company-slogan-options symbol-edit edit-color edit-container" data-view="main"></section>
+        <div class="swiper-container newload"><section class="favorite-logos swiper-wrapper edit-logos company-name-font company-slogan-font edit-layout container-browser container-browser symbol-container-browser monograms-browser symbol-browser color-browser hidden"></section></div>
+
+
+        <div class="arrow-keys hidden">
+            <a href="#" class="arrow-key arrow-key-2 left"></a>
+            <!-- <a href="#" class="arrow-key fav tip" title="Save this logo and we'll get a better sense of your taste."></a> -->
+            <a href="#" class="arrow-key arrow-key-2 right"></a>
+            <span>use arrow keys</span>
+        </div>
+
+
+    </div>
+</div>
+</div>
+            <div id="app-checkout" class="app-view hidden app-checkout">
+    <div class="container">
+      <div class="row copy-header">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+          <h1>Checkout</h1>
+        </div>
+      </div>
+    <div class="row itemPay" style="text-align:left;margin: 10px 20px;">
+        <p>Package: <span id="purchase-product" style="text-transform:capitalize"></span></p>
+        <p class="credit" style="display:none">Credit: $<span id="account-credit" style="text-transform:capitalize"></span></p>
+        <p>Total: $<b id="purchase-price"></b></p>
+    </div>
+       <div id="purchase-flow">
+        <form id="purchase" style="text-align:left">
+            <div id="credit-card-info">
+                <div class="row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="cc-name" autocomplete="cc-name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="number" class="form-control" name="cc-card" autocomplete="cc-number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 noPadding">
+                        <div class="form-group">
+                            <label>Month</label>
+                            <input type="number" class="form-control" name="exp-month" placeholder="MM" autocomplete="cc-exp-month">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 noPadding">
+                        <div class="form-group">
+                            <label>Year</label>
+                            <input type="number" class="form-control" name="exp-year" autocomplete="cc-exp-year" placeholder="YY">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 noPadding">
+                        <div class="form-group">
+                            <label>CVC</label>
+                            <input type="number" class="form-control" name="cc-cvc" autocomplete="cc-csc" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <p class="alert alert-danger alert-success hidden"></p>
+                    <button class="btn btn-primary">Purchase</button>
+                    <div id="paypal-button" style="display:block !important;"></div>
+                </div>
+            </div>
+                <div class="row haveCoupon">
+                    <a id="haveCoupon">Have a coupon?</a>
+                </div>
+        </form>
+        <form id="apply-coupon">
+            <div class="row couponCode hidden">
+                <div class="form-group col-xs-6 col-sm-5">
+                    <label>Coupon Code</label>
+                    <div class="form-inline">
+                        <input type="text" style="margin: 0;" class="form-control" name="coupon-code" autocomplete="coupon-code" placeholder="x2sxuf">
+                    </div>
+                </div>
+                <div class="col-xs-4 apply-coupon">
+                    <button class="btn btn-primary">Apply</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div id="purchase-credit"></div>
+    </div>
+</div>
+            <div id="app-settings" class="app-view app-settings hidden">
+    <div id="account-settings">
+        <h1>Your Account</h1>
+        <div id="account">
+            <form name='updateAccount'>
+                <label>
+                    <h5>Email:</h5>
+                    <input type='text' name='email' value=''/>
+                </label>
+                <label>
+                    <h5>Current Password:</h5>
+                    <input type='password' name='password' />
+                </label>
+                <label>
+                    <h5>New Password:</h5>
+                    <input type='password' name='newpassword' />
+                </label>
+                <label>&nbsp;</label>
+                <input type='submit' value='Update' class='submit button' />
+            </form>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <div class="modal modal--social fade" tabindex="-1" role="dialog" id="shareDialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Share your logo</h3>
+        <p>Each time a user visits your page and then goes on to purchase a logo, you'll get $20 towards a new logo and so will they!</p>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <input type="text" class="form-control form-control--share-url shareUrls" value="http://{{URL}}">
+            </div>
+            <a  href="" target="_blank" class="btn btn-primary btn-block shareUrls">Go to link</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col-sm-4">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.logojoy.com/gallery/" target="_blank" class="btn btn--social btn--fb">
+              Facebook
+            </a>
+          </div>
+          <div class=" col-sm-4">
+            <a href="https://twitter.com/home?status=" target="_blank" class="btn btn--social btn--twitter">
+              Twitter
+            </a>
+          </div>
+          <div class=" col-sm-4">
+            <a href="mailto:?&amp;subject=?&amp;body=https://www.logojoy.com/gallery/" target="_blank" class="btn btn--social btn--email">
+              Email
+            </a>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        <div class="modal modal--purchased fade" tabindex="-1" role="dialog" id="purchasedLogo">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Your logo files</h3>
+        <p>This is exciting! Thanks for purchasing from Logojoy, your logo is ready to download in this zip file.</p>
+        <p class="alert alert-warning delayed-files" style="display:none"></p>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <a href="" id="downloadLink" target="_blank" class="btn btn-primary btn-block delayed-files">Download your Logo</a>
+          </div>
+              <div class="col-md-12 brandg">
+                <hr>
+                <h3 class="modal-title">Activate brand guidelines</h3>
+
+                <div class="brandguidelines brandguidelines-disabled hidden">
+                  <p>Brand guidelines are in beta and accounts can only have on set at the moment. We'll let you know once you can configure more! </p>
+                </div>
+                <p>Set up a personalized URL to show off your logo and share some pointers on how to use it below.</p>
+                <div class="form-group">
+                    <button class="btn hollow btn-block" id="activeBglModal" onclick="$('#purchasedLogo').modal('hide'); var modal=new window.bglModal(); modal.show('onboardBgl')" style="margin:30px 0px;">Activate brand guidelines</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal modal--purchased fade" tabindex="-1" role="dialog" id="delayedpurchasedLogo">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Your logo files</h3>
+        <p>Your logo is taking a little longer than usual to generate, so instead of keeping you waiting we'll send you an email when it's ready. You can also check back in a few minutes and look for the download link when you select your logo.</p>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <!--<a href="" id="downloadLink" target="_blank" class="btn btn-primary btn-block">Download your Logo</a>-->
+          </div>
+          <div class="col-md-12 brandg">
+                <hr>
+                <h3 class="modal-title">Activate brand guidelines</h3>
+
+                <div class="brandguidelines brandguidelines-disabled hidden">
+                  <p>While your logo is being generated, you can set up your brand guidelines</p>
+                  <p>Brand guidelines are in beta and accounts can only have on set at the moment. We'll let you know once you can configure more! </p>
+                </div>
+                <p>Set up a personalized URL to show off your logo and share some pointers on how to use it below.</p>
+                <div class="form-group">
+                    <button class="btn hollow btn-block" onclick="window.LoadView('brandguidelines_view');$('#delayedpurchasedLogo').modal('hide');" style="margin:30px 0px;">Activate Brand Guideline</button>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal modal--purchased fade" tabindex="-1" role="dialog" id="errorpurchasedLogo">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Your logo files</h3>
+        <p style="text-align:center">There was an error generating your logo files. Click below to try again or contact support if the problem continues</p>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <a  id="downloadLink" target="_blank" class="btn btn-primary btn-block" onclick="window.GenerateLogoFiles()">Regenerate your Logo</a>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+        <script src="https://s3.ca-central-1.amazonaws.com/logojoy/dist/jquery.min.js"></script>
+        <script src="https://s3.ca-central-1.amazonaws.com/logojoy/dist/bootstrap.min.js"></script>
+        <script rel="c3190b4" src="https://s3.ca-central-1.amazonaws.com/logojoy/dist/550cb25/Logojoy.js"></script>
+        <script>
+        /* <![CDATA[ */
+            goog_snippet_vars = function() {
+            var w = window;
+                w.google_conversion_id = 863143512;
+                w.google_conversion_label = "h5dmCLyB_m0Q2IzKmwM";
+                w.google_conversion_value = w.totalfinal;
+                w.google_conversion_currency = "USD";
+                w.google_remarketing_only = false;
+            }
+            // DO NOT CHANGE THE CODE BELOW.
+            goog_report_conversion = function(url) {
+                goog_snippet_vars();
+                window.google_conversion_format = "3";
+                var opt = new Object();
+                opt.onload_callback = function() {
+                    if (typeof(url) != 'undefined') {
+                        window.location = url;
+                    }
+                }
+                var conv_handler = window['google_trackConversion'];
+                if (typeof(conv_handler) == 'function') {
+                    conv_handler(opt);
+                }
+            }
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js"></script>
+        <script>
+            window.state && window.state.token ? window.GetUser(window.LoadView(window.state.lastview)):window.UserNotLoggedIn();
+        </script>
+</html>

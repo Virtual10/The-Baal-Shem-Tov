@@ -28,4 +28,29 @@ $(document).ready(function(){
 	        zIndex: 2147483647           // Z‐Index for the overlay  
 	    }); 
 	});
+	
+		
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+		nav:true,
+		autoplay:true,
+		autoplayTimeout:2000,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1
+			},
+			598:{
+				items:1
+			},
+			768:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
+	
 });
